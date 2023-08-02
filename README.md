@@ -32,3 +32,7 @@ To bring this impressive creation to life, we utilized a carefully selected arra
 ## Code
 
 For those curious about the magic behind the robot's movements and weapon control, we have provided the code used to program the Arduino Mega2560 in the 'code' folder of this repository. Feel free to explore and learn from our implementation!
+
+A few images of the Battle Robot are given below,
+
+![BattleBot](https://github.com/randika-perera/Battle-Robot/assets/129817316/08e65928-9059-4486-b278-0e491caf710f)
