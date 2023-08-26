@@ -29,10 +29,6 @@ To bring this impressive creation to life, we utilized a carefully selected arra
 -   **Custom Metal Chassis**: The strong and sturdy metal chassis formed the foundation of our robot, providing the necessary support and protection.
     
 
-## Code
-
-For those curious about the magic behind the robot's movements and weapon control, we have provided the code used to program the Arduino Mega2560 in the 'code' folder of this repository. Feel free to explore and learn from our implementation!
-
 
 ## PCB Design
 
@@ -49,6 +45,9 @@ To ensure impeccable wiring organization and stability, we designed a custom PCB
 
 The enclosure for the battlebot was manufactured using sheet metal. 3D models for the enclosure were designed using Solidwork sheetmetal feature and generated DXF files were sent to the manufacturers.
 
+## Code
+
+For those curious about the magic behind the robot's movements and weapon control, we have provided the code used to program the Arduino Mega2560 in the 'code' folder of this repository. Feel free to explore and learn from our implementation!
 
 
 A few images of the Battle Robot are given below,
