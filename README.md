@@ -41,7 +41,7 @@ To ensure impeccable wiring organization and stability, we designed a custom PCB
 
 
 
-## Solidwork Design
+## Enclosure Design
 
 The enclosure for the battlebot was manufactured using sheet metal. 3D models for the enclosure were designed using Solidwork sheetmetal feature and generated DXF files were sent to the manufacturers.
 
