@@ -1,0 +1,183 @@
+Board Information Report
+Filename     : C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc
+Date         : 7/23/2023
+Time         : 1:45:24 AM
+Time Elapsed : 00:00:00
+
+General
+    Board Size, 92.71mmx59.944mm
+    Components on board, 13
+count : 2
+
+Routing Information
+    Routing completion, 100.00%
+    Connections, 35
+    Connections routed, 35
+    Connections remaining, 0
+count : 4
+
+Layer, Arcs, Pads, Vias, Tracks, Texts, Fills, Regions, ComponentBodies
+    Top Layer, 0, 4, 0, 204, 0, 0, 0, 0
+    Bottom Layer, 0, 0, 0, 89, 0, 0, 0, 0
+    Mechanical 1, 0, 0, 0, 0, 1, 0, 0, 4
+    Top 3D Body, 0, 0, 0, 0, 0, 0, 0, 0
+    Top Courtyard, 0, 0, 0, 0, 0, 0, 0, 0
+    Top Assembly, 0, 0, 0, 0, 0, 0, 0, 0
+    Mechanical 13, 2, 0, 0, 76, 2, 0, 0, 7
+    Mechanical 15, 2, 0, 0, 32, 0, 0, 0, 0
+    Top Component Center, 0, 0, 0, 0, 0, 0, 0, 0
+    Bottom Assembly, 0, 0, 0, 8, 2, 0, 0, 0
+    Bottom Courtyard, 0, 0, 0, 8, 0, 0, 0, 0
+    Bottom 3D Body, 0, 0, 0, 8, 0, 0, 0, 2
+    Bottom Component Center, 0, 0, 0, 4, 0, 0, 0, 0
+    Multi-Layer, 0, 64, 26, 0, 0, 0, 1, 0
+    Top Paste, 0, 0, 0, 0, 0, 0, 0, 0
+    Top Overlay, 1, 0, 0, 60, 6, 0, 0, 0
+    Top Solder, 0, 0, 0, 0, 0, 0, 0, 0
+    Bottom Solder, 0, 0, 0, 0, 0, 0, 0, 0
+    Bottom Overlay, 3, 0, 0, 142, 20, 0, 0, 0
+    Bottom Paste, 0, 0, 0, 0, 0, 0, 0, 0
+    Drill Guide, 0, 0, 0, 0, 0, 0, 0, 0
+    Keep-Out Layer, 0, 0, 0, 8, 0, 0, 0, 0
+    Drill Drawing, 0, 0, 0, 0, 0, 0, 0, 0
+count : 23
+
+Drill Pairs, Vias
+    Top Layer - Bottom Layer, 26
+count : 1
+
+Layer, Sq.In., Sq.MM., Percent of layer
+    Top Layer, 1.294, 835.101, 16%
+    Bottom Layer, 1.019, 657.4, 13%
+count : 2
+
+Non-Plated Hole Size, Pads, Vias
+count : 0
+
+Plated Hole Size, Pads, Vias
+    0mm, 4, 0
+    0.7mm, 2, 0
+    0.8mm, 4, 0
+    0.9mm, 0, 26
+    0.914mm, 30, 0
+    1.016mm, 8, 0
+    1.04mm, 8, 0
+    1.1mm, 12, 0
+count : 8
+
+Non-Plated Slot Size / Length, Pads
+count : 0
+
+Plated Slot Size / Length, Pads
+count : 0
+
+Non-Plated Square Hole Size, Pads
+count : 0
+
+Plated Square Hole Size, Pads
+count : 0
+
+Top Layer Annular Ring Size, Count
+    0.5mm, 38
+    0.51mm, 8
+    0.55mm, 10
+    0.6mm, 26
+    2.032mm, 8
+count : 5
+
+Mid Layer Annular Ring Size, Count
+    0.5mm, 38
+    0.51mm, 8
+    0.55mm, 10
+    0.6mm, 26
+    2.032mm, 8
+count : 5
+
+Bottom Layer Annular Ring Size, Count
+    0.5mm, 38
+    0.51mm, 8
+    0.55mm, 10
+    0.6mm, 26
+    2.032mm, 8
+count : 5
+
+Pad Solder Mask, Count
+    0mm, 32
+    0.1016mm, 36
+count : 2
+
+Pad Paste Mask, Count
+    -1000mm, 32
+    0mm, 36
+count : 2
+
+Pad Pwr/Gnd Expansion, Count
+    0.508mm, 68
+count : 1
+
+Pad Relief Conductor Width, Count
+    0.254mm, 68
+count : 1
+
+Pad Relief Air Gap, Count
+    0.254mm, 68
+count : 1
+
+Pad Relief Entries, Count
+    4, 68
+count : 1
+
+Via Solder Mask, Count
+    0.1016mm, 26
+count : 1
+
+Via Pwr/Gnd Expansion, Count
+    0.508mm, 26
+count : 1
+
+Track Width, Count
+    0.05mm, 26
+    0.1mm, 70
+    0.127mm, 20
+    0.2mm, 94
+    0.254mm, 128
+    0.508mm, 8
+    0.9mm, 293
+count : 7
+
+Arc Line Width, Count
+    0.05mm, 2
+    0.1mm, 2
+    0.2mm, 2
+    0.25mm, 2
+count : 4
+
+Arc Radius, Count
+    0.125mm, 2
+    2.5mm, 4
+    2.6mm, 2
+count : 3
+
+Arc Degrees, Count
+    360, 8
+count : 1
+
+Text Height, Count
+    0.8mm, 1
+    1mm, 2
+    1.524mm, 28
+count : 3
+
+Text Width, Count
+    0.1mm, 3
+    0.1524mm, 2
+    0.254mm, 26
+count : 3
+
+Net Track Width, Count
+    0.9mm, 19
+count : 1
+
+Net Via Size, Count
+    1.5mm, 19
+count : 1

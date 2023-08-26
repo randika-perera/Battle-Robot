@@ -1,0 +1,398 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD23\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">7/23/2023</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">1:58:02 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc" class="file"><acronym title="C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc">C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">9</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Waived Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">6</td></tr>
+</table>
+</td>
+</table><a name="ID3BQBHCPQWU2SFZPUSPXXM1XTCHH0S2JMOKA5OJEJOUAZ5KTVRLXO"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDI2KF5FFTU254C4NWBJDFXPPB2FPAATNATUDFN3OACMAOZQRNHIUG">Clearance Constraint (Gap=0.9mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLXP5U4WGUFM5BTEAVPPO2BGKSG3TQMCHQPR3DEIO5A2ATE0YFTBK">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJ3ZS5GU4PVTEKECGSIMPQ340ZJP5S33UIBQJWSNITR5XAHYBJUPG">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID04GDEIPG41BAMGHBNRS2FMOHJHXSWC3VFKBZCIPBGKAP5WXIDI5K">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDX1GHHPWO34JTJMT3XJHGK3G1AJNEG1BNBTEVFNEJRLEL4ZGMA2CF">Width Constraint (Min=0.9mm) (Max=2mm) (Preferred=0.9mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3EG1NCTMNQ10PICAV34OC5R4DJDJF5SVG1XNIMNFJLY1FVTR4IUP">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCVTGMU04PD1BBTVUMIVXM0HDGFRWO5WJJIIJW5EC4SF3GDIWRWSI">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUVEGGFSUCLCDMH4U3E2WYOUIXDEUQ2SMQ5UVV4OMBBVKBLB2G4CC">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOIPC1Z5HW0SLMSI4MS1JLQXW5FGARSNCQCKOGGD3XGS0FROZ4W2J">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWWN04MAKXPFXDKE4EU4F0LPH4IJJ1LR2JWNQGXODNCMVR2IHJZXL">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</a></td>
+<td class="column2">7</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDB40QC0YHD4V0BQDQMLFYVKNS3DHEVZ2LE5P5XPFKDIQBB5ALZPHC">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0VMQI2XR0MG5KLJR4LJFFEJ2YFF405JE2LCB1ICUZ2QMOZL30V4">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDH3GKWC514Q0PGIUEQGAL05UI41LQ5WYGSYS3MV2X4C5K43P0TM">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">9</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Waived Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAIKZ2G5YSU5VN03SABB1SLABKMEAA42W1TTJUIPLLS4YXFCBVHUH">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</a></td>
+<td class="column2">6</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">6</td>
+</tr>
+</table><br><a name="IDCGANJAELKGEMMNRDFQZSOTLUEM4AN5PNBDQR4GO3ZWSBJ0BNISSG"><h2>Rule Violations</h2></a><a name="IDCVTGMU04PD1BBTVUMIVXM0HDGFRWO5WJJIIJW5EC4SF3GDIWRWSI"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4911.383mil|Location2.X=5038.617mil|Location1.Y=2485.383mil|Location2.Y=2612.617mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4911.383mil|Location2.X=5038.617mil|Location1.Y=2485.383mil|Location2.Y=2612.617mil|Absolute=True">Hole Size Constraint: (3.2mm &gt; 2.54mm) Pad Free-M(126.365mm,64.745mm) on Multi-Layer Actual Hole Size = 3.2mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1811.383mil|Location2.X=1938.617mil|Location1.Y=2485.383mil|Location2.Y=2612.617mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1811.383mil|Location2.X=1938.617mil|Location1.Y=2485.383mil|Location2.Y=2612.617mil|Absolute=True">Hole Size Constraint: (3.2mm &gt; 2.54mm) Pad Free-M(47.625mm,64.745mm) on Multi-Layer Actual Hole Size = 3.2mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDWWN04MAKXPFXDKE4EU4F0LPH4IJJ1LR2JWNQGXODNCMVR2IHJZXL"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4969.375mil|Location2.X=4980.625mil|Location1.Y=2467.993mil|Location2.Y=2479.243mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4969.375mil|Location2.X=4980.625mil|Location1.Y=2467.993mil|Location2.Y=2479.243mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.228mm &lt; 0.254mm) Between Pad Free-M(126.365mm,64.745mm) on Multi-Layer And Track (126.365mm,57.658mm)(126.365mm,62.589mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.228mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5045.757mil|Location2.X=5053.423mil|Location1.Y=2546.397mil|Location2.Y=2554.064mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5045.757mil|Location2.X=5053.423mil|Location1.Y=2546.397mil|Location2.Y=2554.064mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad Free-M(126.365mm,64.745mm) on Multi-Layer And Track (127.762mm,66.269mm)(128.27mm,64.745mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5036.167mil|Location2.X=5043.833mil|Location1.Y=2545.167mil|Location2.Y=2552.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5036.167mil|Location2.X=5043.833mil|Location1.Y=2545.167mil|Location2.Y=2552.833mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad Free-M(126.365mm,64.745mm) on Multi-Layer And Track (128.016mm,64.745mm)(128.521mm,64.745mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5046.167mil|Location2.X=5053.833mil|Location1.Y=2545.167mil|Location2.Y=2552.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5046.167mil|Location2.X=5053.833mil|Location1.Y=2545.167mil|Location2.Y=2552.833mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad Free-M(126.365mm,64.745mm) on Multi-Layer And Track (128.27mm,64.745mm)(128.27mm,75.503mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5046.167mil|Location2.X=5053.833mil|Location1.Y=2545.167mil|Location2.Y=2552.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5046.167mil|Location2.X=5053.833mil|Location1.Y=2545.167mil|Location2.Y=2552.833mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad Free-M(126.365mm,64.745mm) on Multi-Layer And Track (128.27mm,64.745mm)(128.778mm,66.269mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1869.375mil|Location2.X=1880.625mil|Location1.Y=2467.993mil|Location2.Y=2479.243mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1869.375mil|Location2.X=1880.625mil|Location1.Y=2467.993mil|Location2.Y=2479.243mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.228mm &lt; 0.254mm) Between Pad Free-M(47.625mm,64.745mm) on Multi-Layer And Track (47.625mm,41.123mm)(47.625mm,62.589mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.228mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1944.757mil|Location2.X=1956.007mil|Location1.Y=2543.375mil|Location2.Y=2554.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1944.757mil|Location2.X=1956.007mil|Location1.Y=2543.375mil|Location2.Y=2554.625mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.228mm &lt; 0.254mm) Between Pad Free-M(47.625mm,64.745mm) on Multi-Layer And Track (49.781mm,64.745mm)(54.864mm,64.745mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.228mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDIMJLO2N5HROXJ3U3IGH5PSXJLJAFSOKJY33NM2PRHWKMVHOJDWRK"><h2>Waived Violations</h2></a><a name="IDAIKZ2G5YSU5VN03SABB1SLABKMEAA42W1TTJUIPLLS4YXFCBVHUH"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3109.159mil|Location2.X=3116.825mil|Location1.Y=3425.323mil|Location2.Y=3432.989mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3109.159mil|Location2.X=3116.825mil|Location1.Y=3425.323mil|Location2.Y=3432.989mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad nano1-25(79.439mm,87.63mm) on Multi-Layer And Track (79.07mm,54.9mm)(79.07mm,88.9mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br>Waived by Avishka Herath at 7/23/2023 1:44:17 AM</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3109.159mil|Location2.X=3116.825mil|Location1.Y=2825.323mil|Location2.Y=2832.989mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3109.159mil|Location2.X=3116.825mil|Location1.Y=2825.323mil|Location2.Y=2832.989mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad nano1-6(79.439mm,72.39mm) on Multi-Layer And Track (79.07mm,54.9mm)(79.07mm,88.9mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br>Waived by Avishka Herath at 7/23/2023 1:44:17 AM</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3416.107mil|Location2.X=3427.357mil|Location1.Y=2413.668mil|Location2.Y=2424.918mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3416.107mil|Location2.X=3427.357mil|Location1.Y=2413.668mil|Location2.Y=2424.918mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-1(87.362mm,60.325mm) on Top Layer And Track (86.312mm,61.65mm)(93.012mm,61.65mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.2mm]</acronym></a><br>Waived by Avishka Herath at 7/23/2023 1:44:08 AM</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3506.659mil|Location2.X=3517.909mil|Location1.Y=2413.668mil|Location2.Y=2424.918mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3506.659mil|Location2.X=3517.909mil|Location1.Y=2413.668mil|Location2.Y=2424.918mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-2(89.662mm,60.325mm) on Top Layer And Track (86.312mm,61.65mm)(93.012mm,61.65mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.2mm]</acronym></a><br>Waived by Avishka Herath at 7/23/2023 1:44:17 AM</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3597.21mil|Location2.X=3608.46mil|Location1.Y=2413.668mil|Location2.Y=2424.918mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3597.21mil|Location2.X=3608.46mil|Location1.Y=2413.668mil|Location2.Y=2424.918mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-3(91.962mm,60.325mm) on Top Layer And Track (86.312mm,61.65mm)(93.012mm,61.65mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.2mm]</acronym></a><br>Waived by Avishka Herath at 7/23/2023 1:44:17 AM</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3586.334mil|Location2.X=3597.584mil|Location1.Y=2575.081mil|Location2.Y=2586.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\acham\Documents\Projects\EXMO - Battlebot Controller\Battlebot_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3586.334mil|Location2.X=3597.584mil|Location1.Y=2575.081mil|Location2.Y=2586.331mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-4(89.662mm,66.675mm) on Top Layer And Track (86.312mm,65.35mm)(93.012mm,65.35mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.2mm]</acronym></a><br>Waived by Avishka Herath at 7/23/2023 1:44:17 AM</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
