@@ -32,7 +32,7 @@ To bring this impressive creation to life, we utilized a carefully selected arra
 
 ## PCB Design
 
-To ensure impeccable wiring organization and stability, we designed a custom PCBs using Altium Designer, streamlining the intricate connections.
+To ensure impeccable wiring organization and stability, we designed custom PCBs using Altium Designer, streamlining the intricate connections.
 
 <div style="display: flex;">
   <img src="https://github.com/dojitha-mirihagalla/EXMO---Battle-Bot-/assets/126095827/9435c023-1415-44c8-8369-1b89a88d7db0" width="400" alt="1">
