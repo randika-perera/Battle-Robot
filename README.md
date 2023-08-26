@@ -45,6 +45,9 @@ To ensure impeccable wiring organization and stability, we designed custom PCBs 
 
 The enclosure for the battlebot was manufactured using sheet metal. 3D models for the enclosure were designed using Solidwork sheetmetal feature and generated DXF files were sent to the manufacturers.
 
+![GridArt_20230826_133835847](https://github.com/randika-perera/Battle-Robot/assets/129817316/426b29cb-f39a-4fff-b7a0-f63181f60394)
+
+
 ## Code
 
 For those curious about the magic behind the robot's movements and weapon control, we have provided the code used to program the Arduino Mega2560 in the 'code' folder of this repository. Feel free to explore and learn from our implementation!
