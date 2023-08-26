@@ -33,7 +33,7 @@ To bring this impressive creation to life, we utilized a carefully selected arra
 
 For those curious about the magic behind the robot's movements and weapon control, we have provided the code used to program the Arduino Mega2560 in the 'code' folder of this repository. Feel free to explore and learn from our implementation!
 
----
+
 ## PCB Design
 
 To ensure impeccable wiring organization and stability, we designed a custom PCB using Altium Designer, streamlining the intricate connections.
@@ -43,13 +43,13 @@ To ensure impeccable wiring organization and stability, we designed a custom PCB
   <img src="https://github.com/dojitha-mirihagalla/EXMO---Battle-Bot-/assets/126095827/337ab020-b2c4-41c6-89a6-b28b4259c382" width="400" alt="2">
 </div>
 
----
+
 
 ## Solidwork Design
 
 The enclosure for the battlebot was manufactured using sheet metal. 3D models for the enclosure were designed using Solidwork sheetmetal feature and generated DXF files were sent to the manufacturers.
 
----
+
 
 A few images of the Battle Robot are given below,
 
