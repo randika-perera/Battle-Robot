@@ -46,6 +46,11 @@ This is how it looks like in 3D mode
 
 ---
 
+## Solidwork Design
+
+The enclosure for the battlebot was manufactured using sheet metal. 3D models for the enclosure were designed using Solidwork sheetmetal feature and generated DXF files were sent to the manufacturers.
+
+---
 
 A few images of the Battle Robot are given below,
 
