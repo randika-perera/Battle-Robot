@@ -12,7 +12,7 @@ To bring this impressive creation to life, we utilized a carefully selected arra
 
 -   **Arduino Mega2560 Development Board**: The heart of our robot, providing the brains to control its movements and weapons with precision.
     
--   **HC05 Bluetooth Module**: For seamless wireless control, we integrated the HC05 Bluetooth module, offering ease of use and cost-effectiveness. Control of the robot was carried out using a smartphone app that can send serial data via Bluetooth.
+-   **NRF24 Module**: For seamless wireless control, we integrated the NRF24 module, offering ease of use and cost-effectiveness. Control of the robot was carried out using our custom designed controller.
     
 -   **12.6V Li-Po Battery Packs**: To power our battle robot, we harnessed the energy of 12.6V Li-Po battery packs, ensuring high current discharge capability and long-lasting performance.
     
@@ -36,9 +36,8 @@ For those curious about the magic behind the robot's movements and weapon contro
 ---
 ## PCB Design
 
-The PCB design for the Battle Robot is a vital component, optimizing the layout for efficient operation, reliable connections, and improved performance.
+To ensure impeccable wiring organization and stability, we designed a custom PCB using Altium Designer, streamlining the intricate connections.
 
-This is how it looks like in 3D mode
 <div style="display: flex;">
   <img src="https://github.com/dojitha-mirihagalla/EXMO---Battle-Bot-/assets/126095827/9435c023-1415-44c8-8369-1b89a88d7db0" width="400" alt="1">
   <img src="https://github.com/dojitha-mirihagalla/EXMO---Battle-Bot-/assets/126095827/337ab020-b2c4-41c6-89a6-b28b4259c382" width="400" alt="2">
